@@ -29,7 +29,7 @@
             double pi = Math.PI;
             double length =2 * r * pi;
             double areaOfCircle = pi * Math.Pow(r,2);
-            double volume = 4 / 3 * Math.Pow(r, 3);
+            double volume = 4.0 / 3.0 * Math.Pow(r, 3);
             Console.WriteLine($"Length of the circle {length :F2} cm, area {areaOfCircle:F2} cm² and volume {volume:F2} cm³");
 
 

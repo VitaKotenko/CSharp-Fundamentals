@@ -1,0 +1,15 @@
+List of all shapes:
+Circle ca1 has area: 3,14 and perimeter: 6,28
+Square A1 has area: 1 and perimeter: 4
+Circle c2 has area: 31,31 and perimeter: 19,84
+Square s2 has area: 12,58 and perimeter: 14,19
+Square s4 has area: 927,57 and perimeter: 121,82
+Circle c5 has area: 2918,64 and perimeter: 191,51
+____________________
+List of shapes with area from range [10,100]:
+Circle c2 has area: 31,31 and perimeter: 19,84
+Square s2 has area: 12,58 and perimeter: 14,19
+____________________
+List of shapes with letter a in the name:
+Circle ca1 has area: 3,14 and perimeter: 6,28
+Square A1 has area: 1 and perimeter: 4

@@ -35,24 +35,25 @@ namespace FinalProject
 
             foreach (var st in storesxml)
             {
-                Console.WriteLine($"{st.Address} {st.AmountOfJewelries}");
+                Console.WriteLine($"Deserialised Jewelry Store at {st.Address} has {st.AmountOfJewelries} jewelries:");
                 foreach (var j in st.JewelryList)
                 {
-                    Console.WriteLine($"Deserialised{j.ToString()}");
+                    Console.WriteLine($"Deserialised: {j.ToString()}");
                 }
+                Console.WriteLine();
             };
         }
 
         static void Main(string[] args)
         {
             try {
-                string readPath = @"D:\C# Fundamentals\FinalProject\Data\jewelry_store1.txt";
+                string readPath = @"D:\C# Fundamentals\FinalProject\Data\JewelryStores.txt";
                 JewelryStore[] stores = new JewelryStore[4];
                 String[] addresses = new String[4];
-                addresses[0] = "Zarina";
-                addresses[1] = "Zarina1";
-                addresses[2] = "Zarina2";
-                addresses[3] = "Zarina3";
+                addresses[0] = "Kovelska,1";
+                addresses[1] = "Rivnenska,2";
+                addresses[2] = "Lvivska,15";
+                addresses[3] = "Lvivska,5";
 
                 for (int i = 0; i < stores.Length; i++)
                 {
@@ -62,23 +63,27 @@ namespace FinalProject
                 {
                     j.Output();
                 }
-                
+                Console.WriteLine("_________________________");
+
+                string writePathMetalsWithAmount = @"D:\C# Fundamentals\FinalProject\Output files\metals_amount.txt";
+                string writePathStoresWithJewelries = @"D:\C# Fundamentals\FinalProject\Output files\stores_jewelries.txt";
+
+                stores[0].GetMetalsWithAmount(writePathMetalsWithAmount);
+                Console.WriteLine("_________________________");
+
+                JewelryStore.GetStoresWithPriceGreater500(writePathStoresWithJewelries, stores);
+                Console.WriteLine("_________________________");
+
+                Jewelry invalidJewelry = new Jewelry("ring", "ring", 3.0, 1000.0);
+                Console.WriteLine("_________________________");
+
                 // XML Serialization
                 string pathSerialization = @"D:\C# Fundamentals\FinalProject\Output files\jewelry_stores.xml";
                 SerializeXML(pathSerialization, stores);
 
                 // XML Deserialization
                 DeserializeXML(pathSerialization, stores);
-
-
-                string writePathMetalsWithAmount = @"D:\C# Fundamentals\FinalProject\Output files\metals_amount.txt";
-                string writePathStoresWithJewelries = @"D:\C# Fundamentals\FinalProject\Output files\stores_jewelries.txt";
-
-                stores[0].GetMetalsWithAmount(writePathMetalsWithAmount);
-
-                JewelryStore.GetStoresWithPriceGreater500(writePathStoresWithJewelries, stores);
-
-                Jewelry invalidJewelry = new Jewelry("ring", "ring", 3.0, 1000.0);     
+                Console.WriteLine("_________________________");
             }
             
 

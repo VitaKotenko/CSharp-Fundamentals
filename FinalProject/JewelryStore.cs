@@ -84,7 +84,7 @@ namespace FinalProject
 
             using (StreamWriter sw = new StreamWriter(path, false))
             {
-                Console.WriteLine($"Metals with amount of jewelries in in Jewelry Store at {Address}:");
+                Console.WriteLine($"Metals with amount of jewelries in Jewelry Store at {Address}:");
                 sw.WriteLine($"Metals with amount of jewelries in Jewelry Store at {Address}:");
                 foreach (var kvp in metalCounts)
                 {
@@ -103,11 +103,12 @@ namespace FinalProject
 
             using (StreamWriter sw = new StreamWriter(path, false))
             {
-                Console.WriteLine($"Jewelry Stores with total jewelry's price greater than 500");
-                sw.WriteLine($"Jewelry Store with total jewelry's price greater than 500");
+                Console.WriteLine($"List of Jewelry Stores with total jewelry's price greater than 500");
+                sw.WriteLine($"List of Jewelry Stores with total jewelry's price greater than 500");
                 foreach (var store in storesGreater500)
                 {
-                    sw.WriteLine($"\nJewelry store at {store.Address} has:");
+                    sw.WriteLine($"\nJewelry Store at {store.Address} has:");
+                    Console.WriteLine($"\nJewelry Store at {store.Address} has:");
                     store.JewelryList.Sort();
                     foreach (var j in store.JewelryList)
                     {

@@ -1,3 +1,4 @@
-Metals with amount of jewelries in Jewelry Store at Zarina:
+Metals with amount of jewelries in Jewelry Store at Kovelska,1:
+platinum: 3
 gold: 1
 silver: 1

@@ -9,23 +9,7 @@
 11:45:06,079 [1] DEBUG FinalProject.Program - Serialization completed
 11:46:04,546 [1] DEBUG FinalProject.Program - Serialization completed
 11:49:10,025 [1] DEBUG FinalProject.Program - Serialization completed
-12:05:42,678 [1] ERROR FinalProject.Program - Jewelries must be necklace, braclet, ring, or earrings
-12:06:01,643 [1] ERROR FinalProject.Program - Jewelries must be necklace, braclet, ring, or earrings
-12:07:13,358 [1] DEBUG FinalProject.Program - Serialization completed
-12:08:58,611 [1] DEBUG FinalProject.Program - Serialization completed
-12:08:58,641 [1] ERROR FinalProject.Program - Metal must be gold, silver, or platinum
-12:11:14,798 [1] DEBUG FinalProject.Program - Serialization completed
-12:11:14,825 [1] ERROR FinalProject.Program - Metal must be gold, silver, or platinum
-12:18:23,796 [1] DEBUG FinalProject.Program - Serialization completed
-12:18:23,816 [1] ERROR FinalProject.Program - Could not find file 'D:\C# Fundamentals\FinalProject\Output files\jewelry_stores.xml'.
-12:19:12,061 [1] DEBUG FinalProject.Program - Serialization completed
-12:19:12,113 [1] ERROR FinalProject.Program - Metal must be gold, silver, or platinum
-12:19:59,519 [1] DEBUG FinalProject.Program - Serialization completed
-12:19:59,552 [1] ERROR FinalProject.Program - Metal must be gold, silver, or platinum
-12:20:15,826 [1] DEBUG FinalProject.Program - Serialization completed
-12:20:15,865 [1] ERROR FinalProject.Program - Metal must be gold, silver, or platinum
-12:20:46,054 [1] DEBUG FinalProject.Program - Serialization completed
-12:20:46,131 [1] ERROR FinalProject.Program - Metal must be gold, silver, or platinum
-12:27:11,521 [1] DEBUG FinalProject.Program - XML Serialization completed
-12:27:11,535 [1] DEBUG FinalProject.Program - XML Deserialization completed
-12:27:11,552 [1] ERROR FinalProject.Program - Metal must be gold, silver, or platinum
+14:43:18,596 [1] DEBUG FinalProject.Program - XML Serialization completed
+14:43:18,611 [1] DEBUG FinalProject.Program - XML Deserialization completed
+14:43:18,671 [1] ERROR FinalProject.Program - Metal must be gold, silver, or platinum
+14:46:04,557 [1] ERROR FinalProject.Program - Metal must be gold, silver, or platinum

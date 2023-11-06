@@ -41,12 +41,12 @@ namespace FinalProject
 
         public void IsValid()
         {
-            string[] validJewelries = { "necklace", "braclet", "ring", "earrings"};
+            string[] validJewelries = { "necklace", "bracelet", "ring", "earrings"};
             string[] validMetals = { "gold", "silver", "platinum" };
 
             if (!validJewelries.Contains(name.ToLower()))
             {
-                throw new ApplicationException("Jewelries must be necklace, braclet, ring, or earrings");
+                throw new ApplicationException("Jewelry must be necklace, bracelet, ring, or earrings");
             }
             
             if (!validMetals.Contains(metal.ToLower())) 
@@ -54,12 +54,12 @@ namespace FinalProject
                 throw new ApplicationException("Metal must be gold, silver, or platinum");
             }
 
-            if (weight < 0 || weight > 50.0)
+            if (weight <= 0 || weight > 50.0)
             {
                 throw new ApplicationException("Weight must be between 0 and 50 g");
             }
 
-            if (price < 0)
+            if (price <= 0)
             {
                 throw new ApplicationException("Price must be higher than 0");
             }

@@ -1,9 +1,0 @@
-Zarina necklace gold 3,0 200,00
-Zarina necklace silver 3,0 100,00
-Zarina1 necklace gold 3,0 2000,00
-Zarina1 braclet silver 3,0 2000,00
-Zarina1 necklace gold 3,0 2000,00
-Zarina1 ring silver 3,0 100,00
-Zarina2 necklace gold 3,0 2000,00
-Zarina3 ring silver 3,0 100,00
-

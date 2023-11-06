@@ -1,10 +1,23 @@
-Jewelry Store with total jewelry's price greater than 500
+List of Jewelry Stores with total jewelry's price greater than 500
 
-Jewelry store at Zarina1 has:
-Jewelry: braclet was made from silver, price: 2000 and weight: 3 g.
-Jewelry: necklace was made from gold, price: 2000 and weight: 3 g.
-Jewelry: necklace was made from gold, price: 2000 and weight: 3 g.
-Jewelry: ring was made from silver, price: 100 and weight: 3 g.
+Jewelry Store at Kovelska,1 has:
+Jewelry: bracelet was made from platinum, price: 350 and weight: 3 g.
+Jewelry: earrings was made from platinum, price: 300 and weight: 2,5 g.
+Jewelry: necklace was made from gold, price: 220 and weight: 2,3 g.
+Jewelry: necklace was made from silver, price: 120 and weight: 1,5 g.
+Jewelry: ring was made from platinum, price: 280 and weight: 2,8 g.
 
-Jewelry store at Zarina2 has:
-Jewelry: necklace was made from gold, price: 2000 and weight: 3 g.
+Jewelry Store at Rivnenska,2 has:
+Jewelry: bracelet was made from gold, price: 300 and weight: 3,2 g.
+Jewelry: earrings was made from silver, price: 150 and weight: 1,7 g.
+Jewelry: necklace was made from gold, price: 300 and weight: 4 g.
+Jewelry: ring was made from silver, price: 120 and weight: 1,5 g.
+
+Jewelry Store at Lvivska,15 has:
+Jewelry: bracelet was made from gold, price: 400 and weight: 4,8 g.
+Jewelry: bracelet was made from silver, price: 420 and weight: 5 g.
+Jewelry: earrings was made from silver, price: 400 and weight: 4,2 g.
+Jewelry: necklace was made from gold, price: 200 and weight: 3 g.
+Jewelry: necklace was made from silver, price: 180 and weight: 2,2 g.
+Jewelry: ring was made from platinum, price: 250 and weight: 1,8 g.
+Jewelry: ring was made from gold, price: 480 and weight: 5,5 g.

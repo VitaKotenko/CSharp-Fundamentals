@@ -1,8 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfJewelryStore xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <JewelryStore>
-    <Address>Zarina</Address>
-    <AmountOfJewelries>2</AmountOfJewelries>
+    <Address>Kovelska,1</Address>
+    <AmountOfJewelries>5</AmountOfJewelries>
+    <JewelryList>
+      <Jewelry>
+        <Name>earrings</Name>
+        <Metal>platinum</Metal>
+        <Weight>2.5</Weight>
+        <Price>300</Price>
+      </Jewelry>
+      <Jewelry>
+        <Name>necklace</Name>
+        <Metal>gold</Metal>
+        <Weight>2.3</Weight>
+        <Price>220</Price>
+      </Jewelry>
+      <Jewelry>
+        <Name>bracelet</Name>
+        <Metal>platinum</Metal>
+        <Weight>3</Weight>
+        <Price>350</Price>
+      </Jewelry>
+      <Jewelry>
+        <Name>ring</Name>
+        <Metal>platinum</Metal>
+        <Weight>2.8</Weight>
+        <Price>280</Price>
+      </Jewelry>
+      <Jewelry>
+        <Name>necklace</Name>
+        <Metal>silver</Metal>
+        <Weight>1.5</Weight>
+        <Price>120</Price>
+      </Jewelry>
+    </JewelryList>
+  </JewelryStore>
+  <JewelryStore>
+    <Address>Rivnenska,2</Address>
+    <AmountOfJewelries>4</AmountOfJewelries>
+    <JewelryList>
+      <Jewelry>
+        <Name>ring</Name>
+        <Metal>silver</Metal>
+        <Weight>1.5</Weight>
+        <Price>120</Price>
+      </Jewelry>
+      <Jewelry>
+        <Name>earrings</Name>
+        <Metal>silver</Metal>
+        <Weight>1.7</Weight>
+        <Price>150</Price>
+      </Jewelry>
+      <Jewelry>
+        <Name>necklace</Name>
+        <Metal>gold</Metal>
+        <Weight>4</Weight>
+        <Price>300</Price>
+      </Jewelry>
+      <Jewelry>
+        <Name>bracelet</Name>
+        <Metal>gold</Metal>
+        <Weight>3.2</Weight>
+        <Price>300</Price>
+      </Jewelry>
+    </JewelryList>
+  </JewelryStore>
+  <JewelryStore>
+    <Address>Lvivska,15</Address>
+    <AmountOfJewelries>7</AmountOfJewelries>
     <JewelryList>
       <Jewelry>
         <Name>necklace</Name>
@@ -11,64 +77,58 @@
         <Price>200</Price>
       </Jewelry>
       <Jewelry>
+        <Name>bracelet</Name>
+        <Metal>gold</Metal>
+        <Weight>4.8</Weight>
+        <Price>400</Price>
+      </Jewelry>
+      <Jewelry>
         <Name>necklace</Name>
         <Metal>silver</Metal>
-        <Weight>3</Weight>
-        <Price>100</Price>
-      </Jewelry>
-    </JewelryList>
-  </JewelryStore>
-  <JewelryStore>
-    <Address>Zarina1</Address>
-    <AmountOfJewelries>4</AmountOfJewelries>
-    <JewelryList>
-      <Jewelry>
-        <Name>necklace</Name>
-        <Metal>gold</Metal>
-        <Weight>3</Weight>
-        <Price>2000</Price>
+        <Weight>2.2</Weight>
+        <Price>180</Price>
       </Jewelry>
       <Jewelry>
-        <Name>braclet</Name>
+        <Name>bracelet</Name>
         <Metal>silver</Metal>
-        <Weight>3</Weight>
-        <Price>2000</Price>
-      </Jewelry>
-      <Jewelry>
-        <Name>necklace</Name>
-        <Metal>gold</Metal>
-        <Weight>3</Weight>
-        <Price>2000</Price>
+        <Weight>5</Weight>
+        <Price>420</Price>
       </Jewelry>
       <Jewelry>
         <Name>ring</Name>
-        <Metal>silver</Metal>
-        <Weight>3</Weight>
-        <Price>100</Price>
+        <Metal>platinum</Metal>
+        <Weight>1.8</Weight>
+        <Price>250</Price>
       </Jewelry>
-    </JewelryList>
-  </JewelryStore>
-  <JewelryStore>
-    <Address>Zarina2</Address>
-    <AmountOfJewelries>1</AmountOfJewelries>
-    <JewelryList>
       <Jewelry>
-        <Name>necklace</Name>
+        <Name>ring</Name>
         <Metal>gold</Metal>
-        <Weight>3</Weight>
-        <Price>2000</Price>
+        <Weight>5.5</Weight>
+        <Price>480</Price>
+      </Jewelry>
+      <Jewelry>
+        <Name>earrings</Name>
+        <Metal>silver</Metal>
+        <Weight>4.2</Weight>
+        <Price>400</Price>
       </Jewelry>
     </JewelryList>
   </JewelryStore>
   <JewelryStore>
-    <Address>Zarina3</Address>
-    <AmountOfJewelries>1</AmountOfJewelries>
+    <Address>Lvivska,5</Address>
+    <AmountOfJewelries>2</AmountOfJewelries>
     <JewelryList>
       <Jewelry>
         <Name>ring</Name>
         <Metal>silver</Metal>
-        <Weight>3</Weight>
-        <Price>100</Price>
+        <Weight>2</Weight>
+        <Price>180</Price>
+      </Jewelry>
+      <Jewelry>
+        <Name>earrings</Name>
+        <Metal>gold</Metal>
+        <Weight>2.8</Weight>
+        <Price>250</Price>
       </Jewelry>
     </JewelryList>
   </JewelryStore>

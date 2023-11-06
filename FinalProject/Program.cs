@@ -1,60 +1,110 @@
 ﻿using System.Xml.Serialization;
 using static System.Formats.Asn1.AsnWriter;
+using log4net;
+using log4net.Config;
+using System.Security.Cryptography.X509Certificates;
 
+[assembly:log4net.Config.XmlConfigurator(Watch = true)]
 namespace FinalProject
 {
+    
     internal class Program
     {
-        static void Main(string[] args)
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger
+                                                   (System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
+        public static void SerializeXML(string path, JewelryStore[] stores)
         {
-            string readPath = @"D:\FinalProject\jewelry_store1.txt";
-            JewelryStore[] stores = new JewelryStore[2];
-            String[] addresses = new String[2];
-            addresses[0] = "Zarina";
-            addresses[1] = "Zarina1";
-
-
-            for (int i = 0; i < stores.Length; i++)
-            {
-                stores[i] = JewelryStore.InputFromFile(readPath, addresses[i]);
-            }
-            foreach(var j in stores)
-            {
-                j.Output();
-
-            }
-
-            // XML Serialization
             XmlSerializer xmlser = new XmlSerializer(typeof(JewelryStore[]));
-            using (Stream serialStream = new FileStream(@"D:\FinalProject\jewelry_stores.xml", FileMode.Create))
+            using (Stream serialStream = new FileStream(path, FileMode.Create))
             {
                 xmlser.Serialize(serialStream, stores);
             };
+            log.Debug("XML Serialization completed");
+        }
 
+        public static void DeserializeXML(string path, JewelryStore[] stores)
+        {
             JewelryStore[] storesxml;
-            using (Stream serialStream = new FileStream(@"D:\FinalProject\jewelry_stores.xml", FileMode.Open))
+            XmlSerializer xmlser = new XmlSerializer(typeof(JewelryStore[]));
+            using (Stream serialStream = new FileStream(path, FileMode.Open))
             {
                 storesxml = xmlser.Deserialize(serialStream) as JewelryStore[];
-            };
-            foreach(var st in storesxml) { 
-                Console.WriteLine($"{st.Address} {st.AmountOfJewelries}"); 
-                foreach(var j in st.JewelryList)
+            }
+            log.Debug("XML Deserialization completed");
+
+            foreach (var st in storesxml)
+            {
+                Console.WriteLine($"{st.Address} {st.AmountOfJewelries}");
+                foreach (var j in st.JewelryList)
                 {
-                    Console.WriteLine(j.ToString());
+                    Console.WriteLine($"Deserialised{j.ToString()}");
                 }
             };
+        }
 
-            stores[0].GetMetalsWithAmount();
+        static void Main(string[] args)
+        {
+            try {
+                string readPath = @"D:\C# Fundamentals\FinalProject\Data\jewelry_store1.txt";
+                JewelryStore[] stores = new JewelryStore[4];
+                String[] addresses = new String[4];
+                addresses[0] = "Zarina";
+                addresses[1] = "Zarina1";
+                addresses[2] = "Zarina2";
+                addresses[3] = "Zarina3";
 
-            JewelryStore.GetStoresWith(stores);
+                for (int i = 0; i < stores.Length; i++)
+                {
+                    stores[i] = JewelryStore.InputFromFile(readPath, addresses[i]);
+                }
+                foreach (var j in stores)
+                {
+                    j.Output();
+                }
+                
+                // XML Serialization
+                string pathSerialization = @"D:\C# Fundamentals\FinalProject\Output files\jewelry_stores.xml";
+                SerializeXML(pathSerialization, stores);
+
+                // XML Deserialization
+                DeserializeXML(pathSerialization, stores);
 
 
+                string writePathMetalsWithAmount = @"D:\C# Fundamentals\FinalProject\Output files\metals_amount.txt";
+                string writePathStoresWithJewelries = @"D:\C# Fundamentals\FinalProject\Output files\stores_jewelries.txt";
 
+                stores[0].GetMetalsWithAmount(writePathMetalsWithAmount);
 
+                JewelryStore.GetStoresWithPriceGreater500(writePathStoresWithJewelries, stores);
 
+                Jewelry invalidJewelry = new Jewelry("ring", "ring", 3.0, 1000.0);     
+            }
+            
 
+            catch (ArgumentException arge)
+            {
+                Console.WriteLine(arge.Message);
+                log.Error(arge.Message);
+            }
 
+            catch(ApplicationException ae) 
+            { 
+                Console.WriteLine(ae.Message);
+                log.Error(ae.Message);
+            }
 
-    }
+            catch(FileNotFoundException fe) 
+            {
+                Console.WriteLine(fe.Message);
+                log.Error(fe.Message);
+            }
+
+            catch(IndexOutOfRangeException  ie)
+            {
+                Console.WriteLine(ie.Message);
+                log.Error(ie.Message);
+            }
+        }
     }
 }

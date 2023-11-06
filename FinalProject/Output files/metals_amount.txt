@@ -1,0 +1,3 @@
+Metals with amount of jewelries in Jewelry Store at Zarina:
+gold: 1
+silver: 1

@@ -34,12 +34,41 @@ namespace FinalProject
             this.metal = metal;
             this.weight = weight;
             this.price = price;
+
+            IsValid();
+        }
+
+
+        public void IsValid()
+        {
+            string[] validJewelries = { "necklace", "braclet", "ring", "earrings"};
+            string[] validMetals = { "gold", "silver", "platinum" };
+
+            if (!validJewelries.Contains(name.ToLower()))
+            {
+                throw new ApplicationException("Jewelries must be necklace, braclet, ring, or earrings");
+            }
+            
+            if (!validMetals.Contains(metal.ToLower())) 
+            {
+                throw new ApplicationException("Metal must be gold, silver, or platinum");
+            }
+
+            if (weight < 0 || weight > 50.0)
+            {
+                throw new ApplicationException("Weight must be between 0 and 50 g");
+            }
+
+            if (price < 0)
+            {
+                throw new ApplicationException("Price must be higher than 0");
+            }
         }
 
 
         public override string ToString()
         {
-            return ($"Jewelry: {Name} was made from {Metal} cost: {Price} weight{Weight}");
+            return ($"Jewelry: {Name} was made from {Metal}, price: {Price} and weight: {Weight} g.");
         }
 
 
@@ -47,8 +76,8 @@ namespace FinalProject
         {
             Jewelry otherObject = (Jewelry)other;
             return this.Name.CompareTo(otherObject.Name);
-        }
+        }   
 
-        
     }
 }
+

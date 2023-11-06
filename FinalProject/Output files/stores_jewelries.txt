@@ -1,0 +1,10 @@
+Jewelry Store with total jewelry's price greater than 500
+
+Jewelry store at Zarina1 has:
+Jewelry: braclet was made from silver, price: 2000 and weight: 3 g.
+Jewelry: necklace was made from gold, price: 2000 and weight: 3 g.
+Jewelry: necklace was made from gold, price: 2000 and weight: 3 g.
+Jewelry: ring was made from silver, price: 100 and weight: 3 g.
+
+Jewelry store at Zarina2 has:
+Jewelry: necklace was made from gold, price: 2000 and weight: 3 g.

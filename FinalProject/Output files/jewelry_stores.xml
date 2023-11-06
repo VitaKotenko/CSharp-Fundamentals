@@ -41,7 +41,31 @@
         <Price>2000</Price>
       </Jewelry>
       <Jewelry>
-        <Name>ring2</Name>
+        <Name>ring</Name>
+        <Metal>silver</Metal>
+        <Weight>3</Weight>
+        <Price>100</Price>
+      </Jewelry>
+    </JewelryList>
+  </JewelryStore>
+  <JewelryStore>
+    <Address>Zarina2</Address>
+    <AmountOfJewelries>1</AmountOfJewelries>
+    <JewelryList>
+      <Jewelry>
+        <Name>necklace</Name>
+        <Metal>gold</Metal>
+        <Weight>3</Weight>
+        <Price>2000</Price>
+      </Jewelry>
+    </JewelryList>
+  </JewelryStore>
+  <JewelryStore>
+    <Address>Zarina3</Address>
+    <AmountOfJewelries>1</AmountOfJewelries>
+    <JewelryList>
+      <Jewelry>
+        <Name>ring</Name>
         <Metal>silver</Metal>
         <Weight>3</Weight>
         <Price>100</Price>

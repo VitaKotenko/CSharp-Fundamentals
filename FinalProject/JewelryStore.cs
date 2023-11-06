@@ -35,75 +35,87 @@ namespace FinalProject
 
         public static JewelryStore InputFromFile(string path, string address)
         {
-
             
-            List<Jewelry> jewelries = new List<Jewelry>();
-            
-            using (StreamReader sr = new StreamReader(path))
-            {
-                string line;
 
-                while ((line = sr.ReadLine()) != null)
+                List<Jewelry> jewelries = new List<Jewelry>();
+
+                using (StreamReader sr = new StreamReader(path))
                 {
+                    string line;
 
-                    String[] jewelry = line.Split(' ');
-                    if(address == jewelry[0])
+                    while ((line = sr.ReadLine()) != null)
                     {
-                        string name = jewelry[1];
-                        string metal = jewelry[2];
-                        double weight = Double.Parse(jewelry[3]);
-                        double price = Double.Parse(jewelry[4]);
 
-                        jewelries.Add(new Jewelry(name, metal, weight, price));
+                        String[] jewelry = line.Split(' ');
+                        if (address == jewelry[0])
+                        {
+                            string name = jewelry[1];
+                            string metal = jewelry[2];
+                            double weight = Double.Parse(jewelry[3]);
+                            double price = Double.Parse(jewelry[4]);
+
+                            jewelries.Add(new Jewelry(name, metal, weight, price));
+                        }
+
                     }
-                    
-                }
-  
-            }
-            int amountOfJewelries = jewelries.Count();
-            return new JewelryStore(amountOfJewelries, address, jewelries);
 
+                }
+                int amountOfJewelries = jewelries.Count();
+                return new JewelryStore(amountOfJewelries, address, jewelries);
+            
+            
         }
 
         public void Output()
         {
-            Console.WriteLine($"JewelryStore: {Address} has  {amountOfJewelries} jewelries");
+            Console.WriteLine($"JewelryStore at {Address} has  {amountOfJewelries} jewelries");
             foreach (var j in JewelryList)
             {
                 Console.WriteLine($"{j.ToString()}");
             }
         }
 
-        public void GetMetalsWithAmount()
+        public void GetMetalsWithAmount(string path)
         {
 
             var metalCounts = jewelryList
                               .GroupBy(jewelry => jewelry.Metal)
                               .ToDictionary(group => group.Key, group => group.Count());
 
-            Console.WriteLine($"Metals with amount of jewelries in store {Address}:");
-            foreach (var kvp in metalCounts)
+            using (StreamWriter sw = new StreamWriter(path, false))
             {
-                Console.WriteLine($"{kvp.Key}: {kvp.Value}");
-            }
+                Console.WriteLine($"Metals with amount of jewelries in in Jewelry Store at {Address}:");
+                sw.WriteLine($"Metals with amount of jewelries in Jewelry Store at {Address}:");
+                foreach (var kvp in metalCounts)
+                {
+                    Console.WriteLine($"{kvp.Key}: {kvp.Value}");
+                    sw.WriteLine($"{kvp.Key}: {kvp.Value}");
+                }
+            }               
         }
 
-        public static void GetStoresWith(JewelryStore[] stores)
+        public static void GetStoresWithPriceGreater500(string path, JewelryStore[] stores)
         {
 
             var storesGreater500 = stores
                                    .Where(store => store.jewelryList
                                                    .Sum(jewelry => jewelry.Price) > 500);
 
-            Console.WriteLine($"Jewelry Stores with price greater than 500:");
-            foreach (var store in storesGreater500)
+            using (StreamWriter sw = new StreamWriter(path, false))
             {
-                store.JewelryList.Sort();
-                foreach( var j in store.JewelryList)
+                Console.WriteLine($"Jewelry Stores with total jewelry's price greater than 500");
+                sw.WriteLine($"Jewelry Store with total jewelry's price greater than 500");
+                foreach (var store in storesGreater500)
                 {
-                    Console.WriteLine(j.ToString());
+                    sw.WriteLine($"\nJewelry store at {store.Address} has:");
+                    store.JewelryList.Sort();
+                    foreach (var j in store.JewelryList)
+                    {
+                        Console.WriteLine(j.ToString());
+                        sw.WriteLine(j.ToString());
+                    }
                 }
-            }                        
+            }
         }
     }
 }
